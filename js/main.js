@@ -12,11 +12,11 @@ function loadWeather(){
         zip = '02453';
     }
     // GET THE CONDITIONS
-    weatherConditions.open('GET', '/api.wunderground.com/api/3f1c9d9507074675/conditions/q/'+zip+'.json', true);
+    weatherConditions.open('GET', '//api.wunderground.com/api/3f1c9d9507074675/conditions/q/'+zip+'.json', true);
     weatherConditions.responseType = 'text';
     weatherConditions.send(null);
     // GET THE FORECARST
-    weatherForecast.open('GET', '/api.wunderground.com/api/3f1c9d9507074675/forecast/q/'+zip+'.json', true);
+    weatherForecast.open('GET', '//api.wunderground.com/api/3f1c9d9507074675/forecast/q/'+zip+'.json', true);
     weatherForecast.responseType = 'text'; 
     weatherForecast.send();
 }
