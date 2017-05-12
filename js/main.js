@@ -20,6 +20,15 @@ function loadWeather(){
     weatherForecast.responseType = 'text'; 
     weatherForecast.send();
 }
+function tempConversion(){
+    document.getElementById('temperature').innerHTML = cObj.current_observation.temp_f;
+    document.getElementById('r1c3').innerHTML = fObj.forecast.simpleforecast.forecastday[1].high.fahrenheit + "°F";
+    document.getElementById('r1c4').innerHTML = fObj.forecast.simpleforecast.forecastday[1].low.fahrenheit + "°F";
+    document.getElementById('r2c3').innerHTML = fObj.forecast.simpleforecast.forecastday[2].high.fahrenheit + "°F";
+    document.getElementById('r2c4').innerHTML = fObj.forecast.simpleforecast.forecastday[2].low.fahrenheit + "°F";
+    document.getElementById('r3c3').innerHTML = fObj.forecast.simpleforecast.forecastday[3].high.fahrenheit + "°F";
+    document.getElementById('r3c4').innerHTML = fObj.forecast.simpleforecast.forecastday[3].low.fahrenheit + "°F";
+}
 
 weatherConditions.onload = function() {
     if (weatherConditions.status === 200){
